@@ -1,0 +1,10 @@
+RewriteEngine on
+RewriteBase /
+#redirect specific pages
+RewriteRule ^wallpaper.htm http://www.leejofa.com/wallcoverings/threads_wallcoverings_variation.htm [R=301,L]
+RewriteRule ^carpet.html http://www.leejofa.com/threads_carpet.htm [R=301,L]
+
+
+#redirect all other links to 1 link
+RewriteCond %{HTTP_HOST} lj\.kravet\.us
+RewriteRule (.*) http://www.leejofa.com/threads_fabrics.htm [R=301,L]
